@@ -51,7 +51,7 @@ def extract():
 		return
  
 	excel_file = pandas.ExcelFile(excel_path.get())
-	data_frame = pandas.read_excel(excel_file, sheet_name.get())
+	data_frame = pandas.read_excel(excel_file, sheet_name.get(), header=None)
  
 	with open(output_path.get(), "w", encoding="utf-8") as output_file:
 		pages_array = []
